@@ -22,6 +22,9 @@ export class Login extends Component {
         //fetch the data once
         this.fetchItems()
 
+        //login experiment
+        // this.login()
+
         // const cookies = new Cookies()
         // localStorage.setItem('userId', this.state.userId)
     }
@@ -74,9 +77,26 @@ export class Login extends Component {
         this.setState({ data: items })
         // console.log(typeof this.state.data)
         // console.log(this.state.data[0].id)
-        // console.log(this.state.data)
+        console.log(this.state.data)
         // console.log(this.state.data[0].address.street)
     }
+
+    // fetchItems = async () => {
+    //     const returned = await 
+    // }
+
+    // login = async () => {
+    //     const response = await fetch('http://localhost:3000/login', {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify({ username: 'andyzhang',
+    //                                password: '123'}),
+    //     })
+
+    //     console.log(response)
+    //     console.log(response.status)
+    //     console.log(typeof response.status)
+    // }
 
     render() {
         //eturn <Redirect to='/Main' push />

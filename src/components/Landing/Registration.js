@@ -4,23 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Redirect, withRouter } from "react-router-dom"
 
 export class Registration extends Component {
-
-
-
-  // state = {
-  //   accountName: "",
-  //   emailAddress: "",
-  //   phoneNumber: "",
-  //   dob: "",
-  //   ageValid: "",
-  //   zipCode: "",
-  //   password: "",
-  //   passwordConfrm: "",
-  //   passwordValid: "",
-  //   userId: 15,
-  //   redirectMain: false,
-  //   uniqueUserName: false
-  // }
   constructor(props) {
     super(props)
 
@@ -198,7 +181,7 @@ getUserName = () => {
     if (ageValid === true && passwordValid === true && unique === true) {
       localStorage.setItem("userId", this.state.userId)
       localStorage.setItem('userValid', true);
-      // this.setState({ redirectMain: true })          //comment out then no redirect 
+      // this.setState({ : true })                //comment out then no redirect 
       console.log("in inner!!!!!!!!!!")
  
       // this.logined = true;
@@ -222,8 +205,8 @@ getUserName = () => {
         {/* {localStorage.setItem('userValid', true)} */}
         {/* {<Redirect to='/Main' push />} */}
           { this.state.redirectMain && <Redirect to='/Main' push />}
-        {/* <form className="registrationForm" onSubmit={this.handleSubmit}> */}
-        <form className="registrationForm" onSubmit={e => e.preventDefault()}>
+        <form className="registrationForm" onSubmit={this.handleSubmit}>
+        {/* <form className="registrationForm" onSubmit={e => e.preventDefault()}> */}
 
           <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div className="row ml-5">
@@ -321,7 +304,8 @@ getUserName = () => {
 
 
             <div className="button">
-              <button className="btn btn-primary btn-sm mt-2" onClick={this.handleSubmit}>Register</button>
+              {/* <button className="btn btn-primary btn-sm mt-2" onClick={this.handleSubmit}>Register</button> */}
+              <button className="btn btn-primary btn-sm mt-2" type="submit">Submit</button>
               <button className="btn btn-primary btn-sm ml-1 mt-2" onClick={this.cancelForm}>Clear</button>
             </div>
           </div>
